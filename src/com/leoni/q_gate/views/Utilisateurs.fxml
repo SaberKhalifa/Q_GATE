@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1578.0"
+	style="-fx-background-color: white;" stylesheets="@css/Metro-UI.css"
+	AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+	xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.leoni.q_gate.controllers.UserCtrl">
+	<children>
+		<AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="592.0"
+			prefWidth="1234.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="91.0">
+			<children>
+				<BorderPane fx:id="paneTabel" focusTraversable="true"
+					layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1225.0"
+					style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0"
+					AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+					AnchorPane.topAnchor="9.0">
+					<center>
+						<TableView fx:id="tableUsers" accessibleText="Utilisateurs"
+							prefHeight="151.0" prefWidth="1578.0" style="-fx-border-color: #323232;"
+							BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="colActionUser" prefWidth="148.99996948242188"
+									text="ACTION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colMatriculeUser" prefWidth="116.0"
+									text="Matricule">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colUsername" prefWidth="196.0"
+									text="Nom d'ulisateur">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colTypeUser" prefWidth="210.0"
+									text="Type d'utilsateur">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colPassword" prefWidth="310.0"
+									text="Mot de passe">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colActived" prefWidth="260.0"
+									text="Actived">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+							</columns>
+							<BorderPane.margin>
+								<Insets bottom="20.0" left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</TableView>
+					</center>
+
+				</BorderPane>
+				<AnchorPane fx:id="paneUser" focusTraversable="true"
+					opacity="0.0" prefHeight="560.0" prefWidth="1225.0"
+					style="-fx-background-color: white;">
+					<children>
+						<Label alignment="CENTER_RIGHT" layoutX="105.0" layoutY="36.0"
+							prefHeight="17.0" prefWidth="79.0" text="Matricule : *" textFill="#b22121" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="72.0"
+							prefHeight="17.0" prefWidth="122.0" text="Type d'utilisateur :" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="142.0"
+							prefHeight="17.0" prefWidth="122.0" text="Mot de passe  :" />
+						<PasswordField fx:id="txtPassword" layoutX="192.0"
+							layoutY="137.0" prefHeight="27.0" prefWidth="414.0" promptText="mot de passe " />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="176.0"
+							prefHeight="17.0" prefWidth="122.0" text="Activer :" />
+						<Button fx:id="btnSaveUser" layoutX="498.0" layoutY="203.0"
+							mnemonicParsing="false" onAction="#saveUser" prefHeight="29.0"
+							prefWidth="108.0" styleClass="btn" text="Enregistrer" />
+						<Button fx:id="btnBackUser" layoutX="29.0" layoutY="13.0"
+							mnemonicParsing="false" onAction="#aksiBackUser" prefHeight="40.0"
+							prefWidth="40.0" stylesheets="@css/buttonCircleBlack.css">
+							<graphic>
+								<ImageView fitHeight="17.0" fitWidth="20.0"
+									pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@img/arrowLeftBlack.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<ComboBox fx:id="txtTypeUser" layoutX="193.0" layoutY="66.0"
+							prefHeight="27.0" prefWidth="414.0" promptText="Type d'tulisateur" />
+						<TextField fx:id="txtUsername" accessibleRole="PASSWORD_FIELD"
+							layoutX="192.0" layoutY="101.0" prefHeight="27.0" prefWidth="414.0"
+							promptText="nom d'utilisateur" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="106.0"
+							prefHeight="17.0" prefWidth="122.0" text="Nom d'utlisateur  :" />
+						<CheckBox fx:id="txtActived" layoutX="193.0" layoutY="176.0"
+							mnemonicParsing="false" text="Oui" />
+						<CheckBox fx:id="txtNonActived" layoutX="244.0" layoutY="175.0"
+							mnemonicParsing="false" text="Non" />
+						<ComboBox fx:id="txtMatEmp" layoutX="193.0" layoutY="32.0"
+							prefHeight="27.0" prefWidth="414.0" promptText="Matricule" />
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<Separator layoutX="9.0" layoutY="88.0" prefHeight="7.0"
+			prefWidth="1225.0" AnchorPane.leftAnchor="9.0"
+			AnchorPane.rightAnchor="9.0" />
+		<Text fill="#2b579a" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Gestion utilisateurs">
+			<font>
+				<Font name="Segoe UI Semilight" size="45.0" />
+			</font>
+		</Text>
+		<ProgressBar fx:id="bar" layoutY="80.0" prefHeight="14.0"
+			prefWidth="1250.0" progress="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+		<Button defaultButton="true" layoutX="873.0" layoutY="46.0"
+			mnemonicParsing="false" onAction="#aksiNewUser" prefHeight="29.0"
+			prefWidth="164.0" styleClass="btn" text="Nouveau utilisateur"
+			AnchorPane.rightAnchor="10.0" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1578.0" style="-fx-background-color: white;" stylesheets="@css/Metro-UI.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leoni.q_gate.controllers.ControleCtrl">
+	<children>
+		<AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="592.0" prefWidth="1234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="91.0">
+			<children>
+				<BorderPane fx:id="paneStatFaute" focusTraversable="true" opacity="0.0" prefHeight="578.0" prefWidth="1578.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+					<top>
+						<Button fx:id="btnBack" alignment="CENTER" mnemonicParsing="false" onAction="#aksiBack" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/buttonCircleBlack.css" BorderPane.alignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@img/arrowLeftBlack.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<BorderPane.margin>
+								<Insets left="10.0" top="5.0" />
+							</BorderPane.margin>
+						</Button>
+					</top>
+				</BorderPane>
+				<BorderPane fx:id="paneStatGroupe" focusTraversable="true" layoutX="10.0" layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1578.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+					<top>
+						<Button fx:id="btnBack" alignment="CENTER" mnemonicParsing="false" onAction="#aksiBack" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/buttonCircleBlack.css" BorderPane.alignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@img/arrowLeftBlack.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="10.0" top="5.0" />
+							</BorderPane.margin>
+						</Button>
+					</top>
+				</BorderPane>
+				<BorderPane fx:id="paneTabel" focusTraversable="true" layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1578.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+					<center>
+						<TableView fx:id="tableFaute" layoutX="11.0" layoutY="27.0" prefHeight="464.0" prefWidth="1568.0" style="-fx-border-color: #323232;" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="27.0" BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="colAction" prefWidth="148.0" text="ACTION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colKSK" prefWidth="152.0" text="N° KSK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colGroupe" prefWidth="137.0" text="GROUPE">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colDesignation" prefWidth="137.0" text="DESIGNATION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colFaute" prefWidth="137.0" text="FAUTE">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colOK" prefWidth="137.0" text="OK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colNOK" prefWidth="846.0" text="NOK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+							</columns>
+							<BorderPane.margin>
+								<Insets left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</TableView>
+					</center>
+					<top>
+						<BorderPane prefHeight="63.0" prefWidth="1578.0" BorderPane.alignment="CENTER">
+							<center>
+								<ComboBox fx:id="txtGroupe" maxWidth="1.7976931348623157E308" onAction="#loadByGroupe" prefHeight="47.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+									<BorderPane.margin>
+										<Insets />
+									</BorderPane.margin>
+								</ComboBox>
+							</center>
+							<BorderPane.margin>
+								<Insets left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</BorderPane>
+					</top>
+					<bottom>
+						<FlowPane alignment="CENTER" prefHeight="150.0" prefWidth="1568.0" style="-fx-background-color: #EFEFEF;" BorderPane.alignment="CENTER">
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</BorderPane.margin>
+							<children>
+                        <Label text="OK">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+								<Pane prefHeight="146.0" prefWidth="447.0">
+									<children>
+										<Circle fill="#1d942d" layoutX="69.0" layoutY="75.0" radius="52.0" stroke="BLACK" />
+										<Circle fill="#d31a14" layoutX="374.0" layoutY="76.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" />
+										<Line endX="100.0" layoutX="223.0" layoutY="76.0" startX="-100.0" />
+										<Label fx:id="lblOK" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="63.0" prefHeight="21.0" prefWidth="83.0" textFill="#efefef">
+											<font>
+												<Font name="System Bold" size="15.0" />
+											</font>
+										</Label>
+										<Label fx:id="lblNOK" alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="65.0" prefHeight="21.0" prefWidth="76.0" text="0" textFill="#efefef">
+											<font>
+												<Font name="System Bold" size="15.0" />
+											</font>
+										</Label>
+									</children>
+								</Pane>
+                        <Label text="NOK">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+							</children>
+						</FlowPane>
+					</bottom>
+				</BorderPane>
+				<!-- PLACE PANE NEW GROUPE -->
+			</children>
+		</AnchorPane>
+		<Separator layoutX="9.0" layoutY="88.0" prefHeight="7.0" prefWidth="1225.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" />
+		<Text fill="#2b579a" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scannage de fautes">
+			<font>
+				<Font name="Segoe UI Semilight" size="45.0" />
+			</font>
+		</Text>
+		<Button fx:id="btnStatFaute" defaultButton="true" layoutX="1045.0" layoutY="46.0" mnemonicParsing="false" onAction="#aksiStatFaute" prefHeight="29.0" prefWidth="186.0" styleClass="btn" text="Statistiques par fautes" AnchorPane.rightAnchor="10.0" />
+		<ProgressBar fx:id="bar" layoutY="80.0" prefHeight="14.0" prefWidth="1250.0" progress="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+		<Button fx:id="btnStatGroupe" defaultButton="true" layoutX="1181.0" layoutY="46.0" mnemonicParsing="false" onAction="#aksiStatGroupe" prefHeight="29.0" prefWidth="186.0" styleClass="btn" text="Statistiques par groupes" AnchorPane.rightAnchor="206.0" />
+	</children>
+</AnchorPane>

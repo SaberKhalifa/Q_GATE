@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1578.0" style="-fx-background-color: white;" stylesheets="@css/Metro-UI.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leoni.q_gate.controllers.GRUserCtrl">
+	<children>
+		<AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="592.0" prefWidth="1234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="91.0">
+			<children>
+				<AnchorPane fx:id="paneGroupe" focusTraversable="true" opacity="0.0" prefHeight="560.0" prefWidth="1225.0" style="-fx-background-color: white;">
+					<children>
+						<TextField fx:id="txtGrp" layoutX="192.0" layoutY="31.0" prefHeight="27.0" prefWidth="414.0" promptText="Groupe" />
+						<Label alignment="CENTER_RIGHT" layoutX="105.0" layoutY="36.0" prefHeight="17.0" prefWidth="79.0" text="Groupe : *" textFill="#b22121" />
+						<Button fx:id="btnSaveGroupe" layoutX="498.0" layoutY="164.0" mnemonicParsing="false" onAction="#saveGroupe" prefHeight="29.0" prefWidth="108.0" styleClass="btn" text="Enregistrer" />
+						<Button fx:id="btnBackGroupe" layoutX="29.0" layoutY="13.0" mnemonicParsing="false" onAction="#aksiBackGroupe" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/buttonCircleBlack.css">
+							<graphic>
+								<ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@img/arrowLeftBlack.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<TextField fx:id="txtDesignation" accessibleRole="PASSWORD_FIELD" layoutX="192.0" layoutY="76.0" prefHeight="27.0" prefWidth="414.0" promptText="Désignation" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="81.0" prefHeight="17.0" prefWidth="122.0" text="Désignation : *" textFill="#b22121" />
+						<TextField fx:id="txtServiceGr" layoutX="193.0" layoutY="116.0" prefHeight="27.0" prefWidth="414.0" promptText="Service" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="121.0" prefHeight="17.0" prefWidth="122.0" text="Service : *" textFill="#b22121" />
+					</children>
+				</AnchorPane>
+				<BorderPane fx:id="paneTabel" focusTraversable="true" layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1225.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+					<center>
+						<TableView fx:id="tableGroupes" prefHeight="137.0" prefWidth="1228.0" style="-fx-border-color: #323232;" BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="colActionGR" prefWidth="152.0" text="ACTION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colGroupe" prefWidth="270.0" text="Groupe">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colDesigantion" prefWidth="394.0" text="Désignation">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colService" prefWidth="425.0" text="Service">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+							</columns>
+							<BorderPane.margin>
+								<Insets bottom="20.0" left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</TableView>
+					</center>
+
+				</BorderPane>
+			</children>
+		</AnchorPane>
+		<Separator layoutX="9.0" layoutY="88.0" prefHeight="7.0" prefWidth="1225.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" />
+		<Text fill="#2b579a" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion groupes">
+			<font>
+				<Font name="Segoe UI Semilight" size="45.0" />
+			</font>
+		</Text>
+		<Button defaultButton="true" layoutX="1045.0" layoutY="46.0" mnemonicParsing="false" onAction="#aksiNewGroupe" prefHeight="29.0" prefWidth="164.0" styleClass="btn" text="Nouveau groupe" AnchorPane.rightAnchor="10.0" />
+		<ProgressBar fx:id="bar" layoutY="80.0" prefHeight="14.0" prefWidth="1250.0" progress="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+	</children>
+</AnchorPane>

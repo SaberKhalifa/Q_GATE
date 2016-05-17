@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1578.0" style="-fx-background-color: white;" stylesheets="@css/Metro-UI.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leoni.q_gate.controllers.ScannageCtrl">
+	<children>
+		<AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="592.0" prefWidth="1234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="91.0">
+			<children>
+				<BorderPane fx:id="paneTabel" focusTraversable="true" layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1578.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+					<top>
+						<FlowPane alignment="CENTER" style="-fx-background-color: #EFEFEF;" BorderPane.alignment="CENTER">
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</BorderPane.margin>
+							<Label alignment="CENTER" text="N° KSK : ">
+								<font>
+									<Font name="System Bold" size="34.0" />
+								</font>
+							</Label>
+
+							<TextField fx:id="txtKSK" alignment="CENTER" layoutY="47.0" prefHeight="52.0" prefWidth="300.0" promptText="Scanner N° KSK" AnchorPane.leftAnchor="0.0">
+								<FlowPane.margin>
+									<Insets bottom="5.0" right="20.0" top="5.0" />
+								</FlowPane.margin>
+							</TextField>
+							<Label alignment="CENTER" text="N° GROUPE : ">
+								<font>
+									<Font name="System Bold" size="34.0" />
+								</font>
+							</Label>
+							<TextField fx:id="txtGroupe" alignment="CENTER" layoutX="826.0" layoutY="47.0" prefHeight="52.0" prefWidth="300.0" promptText="Scanner N° Groupe">
+								<FlowPane.margin>
+									<Insets />
+								</FlowPane.margin>
+							</TextField>
+						</FlowPane>
+					</top>
+					<center>
+						<TableView fx:id="tableFaute" layoutX="11.0" layoutY="27.0" prefHeight="457.0" prefWidth="265.0" style="-fx-border-color: #323232;" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="27.0" BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="colAction" prefWidth="148.0" text="ACTION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colKSK" prefWidth="152.0" text="N° KSK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colGroupe" prefWidth="137.0" text="GROUPE">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colDesignation" prefWidth="137.0" text="DESIGNATION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colFaute" prefWidth="137.0" text="FAUTE">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colOK" prefWidth="137.0" text="OK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colNOK" prefWidth="846.0" text="NOK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+							</columns>
+							<BorderPane.margin>
+								<Insets left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</TableView>
+					</center>
+					<bottom>
+						<BorderPane fx:id="paneStatFaute" focusTraversable="true" prefHeight="320.0" prefWidth="1573.0" style="-fx-background-color: #EFEFEF; -fx-border-color: #323232;" BorderPane.alignment="CENTER">
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</BorderPane.margin>
+                     <top>
+								<FlowPane alignment="CENTER" prefHeight="67.0" prefWidth="1563.0" style="-fx-background-color: #EFEFEF; -fx-border-color: #323232;" BorderPane.alignment="CENTER">
+									<BorderPane.margin>
+										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+									</BorderPane.margin>
+									<children>
+                              <Label text="OK">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+										<Pane prefHeight="76.0" prefWidth="355.0">
+											<children>
+												<Circle fill="#1d942d" layoutX="47.0" layoutY="38.0" radius="30.0" stroke="BLACK" />
+												<Circle fill="#d31a14" layoutX="310.0" layoutY="38.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+												<Label fx:id="lblOK" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="27.0" prefHeight="21.0" prefWidth="61.0" text="0" textFill="#efefef">
+													<font>
+														<Font name="System Bold" size="15.0" />
+													</font>
+												</Label>
+												<Label fx:id="lblNOK" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="27.0" prefHeight="21.0" prefWidth="59.0" text="0" textFill="#efefef">
+													<font>
+														<Font name="System Bold" size="15.0" />
+													</font>
+												</Label>
+												<Line endX="100.0" layoutX="177.0" layoutY="38.0" startX="-100.0" />
+											</children>
+										</Pane>
+                              <Label text="NOK">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+									</children>
+								</FlowPane>
+                     </top>
+						</BorderPane>
+					</bottom>
+				</BorderPane>
+				<!-- PLACE PANE NEW GROUPE -->
+			</children>
+		</AnchorPane>
+		<Separator layoutX="9.0" layoutY="88.0" prefHeight="7.0" prefWidth="1225.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" />
+		<Text fill="#2b579a" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scannage de fautes">
+			<font>
+				<Font name="Segoe UI Semilight" size="45.0" />
+			</font>
+		</Text>
+		<ProgressBar fx:id="bar" layoutY="80.0" prefHeight="14.0" prefWidth="1250.0" progress="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+	</children>
+</AnchorPane>

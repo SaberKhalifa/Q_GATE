@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="798.0" prefWidth="1578.0"
+	style="-fx-background-color: white;" stylesheets="@css/Metro-UI.css"
+	AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+	xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.leoni.q_gate.controllers.FauteCtrl">
+	<children>
+		<AnchorPane layoutX="9.0" layoutY="91.0" prefHeight="592.0"
+			prefWidth="1234.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="91.0">
+			<children>
+				<AnchorPane fx:id="paneFaute" focusTraversable="true"
+					opacity="0.0" prefHeight="707.0" prefWidth="1568.0"
+					style="-fx-background-color: #F7F7F7;">
+					<children>
+						<Button fx:id="btnBack" layoutX="29.0" layoutY="13.0"
+							mnemonicParsing="false" onAction="#aksiBack" prefHeight="40.0"
+							prefWidth="40.0" stylesheets="@css/buttonCircleBlack.css">
+							<graphic>
+								<ImageView fitHeight="17.0" fitWidth="20.0"
+									pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@img/arrowLeftBlack.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnSaveFaute" layoutX="502.0" layoutY="194.0"
+							mnemonicParsing="false" onAction="#saveFaute" prefHeight="29.0"
+							prefWidth="108.0" styleClass="btn" text="Enregistrer" />
+						<TextField fx:id="txtFaute" accessibleRole="PASSWORD_FIELD"
+							layoutX="192.0" layoutY="68.0" prefHeight="27.0" prefWidth="414.0"
+							promptText="n° faute" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="73.0"
+							prefHeight="17.0" prefWidth="122.0" text="Faute  : *" textFill="#b22121" />
+						<CheckBox fx:id="txtNOK" layoutX="556.0" layoutY="161.0"
+							mnemonicParsing="false" text="NOK" />
+						<CheckBox fx:id="txtOK" layoutX="502.0" layoutY="161.0"
+							mnemonicParsing="false" text="OK" />
+						<TextField fx:id="txtDesigantion" accessibleRole="PASSWORD_FIELD"
+							layoutX="192.0" layoutY="112.0" prefHeight="27.0" prefWidth="414.0"
+							promptText="désignation" />
+						<Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="117.0"
+							prefHeight="17.0" prefWidth="122.0" text="Désignation  : *"
+							textFill="#b22121" />
+					</children>
+				</AnchorPane>
+				<BorderPane fx:id="paneTabel" focusTraversable="true"
+					layoutY="10.0" opacity="0.0" prefHeight="578.0" prefWidth="1578.0"
+					AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+					<top>
+						<TextField fx:id="txtSearch" onKeyReleased="#search"
+							promptText="Recherche ..." BorderPane.alignment="CENTER">
+							<BorderPane.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+							</BorderPane.margin>
+						</TextField>
+					</top>
+					<center>
+						<TableView fx:id="tableKSK" layoutX="11.0" layoutY="27.0"
+							prefHeight="387.0" prefWidth="1568.0" style="-fx-border-color: #323232;"
+							AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="11.0"
+							AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="27.0"
+							BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="colAction" prefWidth="148.0"
+									text="ACTION">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colFaute" prefWidth="152.0"
+									text="CB Faute">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colDesignation" prefWidth="137.0"
+									text="Désignation">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colOK" prefWidth="250.0" text="OK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+								<TableColumn fx:id="colNOK" prefWidth="250.0" text="NOK">
+									<graphic>
+										<ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49"
+											pickOnBounds="true" smooth="false">
+											<image>
+												<Image url="@img/tabel.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</TableColumn>
+							</columns>
+							<BorderPane.margin>
+								<Insets left="5.0" right="5.0" />
+							</BorderPane.margin>
+						</TableView>
+					</center>
+				</BorderPane>
+				<!-- PLACE PANE NEW GROUPE -->
+			</children>
+		</AnchorPane>
+		<Separator layoutX="9.0" layoutY="88.0" prefHeight="7.0"
+			prefWidth="1225.0" AnchorPane.leftAnchor="9.0"
+			AnchorPane.rightAnchor="9.0" />
+		<Text fill="#2b579a" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Gestion de fautes">
+			<font>
+				<Font name="Segoe UI Semilight" size="45.0" />
+			</font>
+		</Text>
+		<Button fx:id="btnNewFaute" defaultButton="true" layoutX="1045.0"
+			layoutY="46.0" mnemonicParsing="false" onAction="#aksiNewFaute"
+			prefHeight="29.0" prefWidth="164.0" styleClass="btn" text="Nouveau faute"
+			AnchorPane.rightAnchor="10.0" />
+		<ProgressBar fx:id="bar" layoutY="80.0" prefHeight="14.0"
+			prefWidth="1250.0" progress="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+	</children>
+</AnchorPane>
